@@ -34,14 +34,14 @@ class CPFvalidator:
         validacao = sum(v1*v2 for v1, v2 in zip(cpf_formatado[0:9], range(10, 1, -1)))
         resto = (validacao * 10 % 11) % 10
         if cpf_formatado[9] != resto:
-            return False
+            return 'CPF Inválido.'
         else:
             validacao = sum(v3*v4 for v3, v4 in zip(cpf_formatado[0:10], range(11, 1, -1)))
             resto = (validacao * 10 % 11) % 10
             if cpf_formatado[10] != resto:
-                return False
+                return 'CPF Inválido'
             else:
-                return True
+                return 'O CPF é real e foi válidado.'
 
 if __name__ == "__main__":
     while True:
