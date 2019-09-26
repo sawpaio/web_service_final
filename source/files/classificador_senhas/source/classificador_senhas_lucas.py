@@ -14,7 +14,7 @@ class Classifica:
     @classmethod
     def classifica_senha(cls, pwd):
         if len(pwd) <= 7 or isinstance(pwd, int):
-            return 'Senha Inválida.'
+            return 'Senha extremamente fraca'
 
         flag = -1
         if verify_letters(pwd) == True:
