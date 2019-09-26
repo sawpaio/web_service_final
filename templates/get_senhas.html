@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body,
+        html{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: url('https://addwill.addtoken.io/assets/images/chain.gif');
+            text-align: center;
+        }
+        .titulo{color: white; text-align: center; font-size: 200%; margin:80px;}
+        .titulo2{color: white; text-align: center; font-size: 200%; margin:80px;}
+        .valor{color: white; text-align: center; font-size: 200%; margin:200px;}
+    </style>
+    <title>Geração de Senhas e Classificação</title>
+</head>
+<body>
+        <h1 class="titulo">{{index}}</h1>
+        <h1 class="titulo2">{{result}}</h1>
+        <h1 class="valor"> 
+        <script>
+            // function confirmRefresh() {
+            // var okToRefresh = confirm("Deseja gerar uma nova senha?");
+            // if (okToRefresh)
+            //     {
+            //             setTimeout("location.reload(true);",1);
+            //     }
+            // }
+            var button3 = document.getElementById('botao-get-senha');
+            function SENHA() {
+                var okToRefresh = confirm("Deseja gerar uma nova senha?");
+                if (okToRefresh)
+                    {
+                        window.location = "http://localhost:7777/senha/";
+                    }
+            }
+            </script>
+        <a href="javascript:SENHA();">Gerar nova senha</a>
+    </h1>
+</body>
+</html>

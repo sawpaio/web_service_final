@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body,
+        html{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: url('https://addwill.addtoken.io/assets/images/chain.gif');
+            text-align: center;
+        }
+        .titulo{color: white; text-align: center; font-size: 300%; margin:80px;}
+        .botao{color: white; text-align: center; font-size:100%; margin:0; padding: 0}
+        .classe1{display:inline; color: white; margin: 0; padding: 0; line-height: 3; font-size: 120%}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <h1 class="titulo">{{index}}</h1>
+        <form action="http://localhost:7777/roman"  method="post"> 
+            <div class="classe1">
+                <label for="nome">Digite um valor inteiro para converter em Romano: </label>
+                <input type="text" id="nome" />
+                <input type="submit" value="Converter"/>
+            </div>
+        </form>
+        <form action="http://localhost:7777/roman"  method="post"> 
+            <div class="classe1">
+                <label for="nome">Digite um CPF para ser convertido: </label>
+                <input type="text" id="nome" />
+                <input type="submit" value="Converter"/>
+            </div>
+        </form>
+</body>
+</html>

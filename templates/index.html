@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body,
+        html{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            margin: 1px 4px 0 0;
+        }
+        body{
+            background: url('https://addwill.addtoken.io/assets/images/chain.gif');
+            text-align: center;
+        }
+        .titulo{color: white; text-align: center; font-size: 300%; margin:80px; line-height: 3;} 
+        .botao{color: white; text-align: center; font-size:100%; margin:0; padding: 0;}
+        .classe1{color: white; margin: 0; padding: 0; line-height: 3; font-size: 110%;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <h1 class="titulo">{{index}}</h1>
+        
+        <form method="post">
+            <button type="button" id="botao-submit-roman" onclick="Roman()" >Conversor de Números Inteiros para Romanos</button>
+            <button type="button" id="botao-submit-cpf" onclick="CPF()" >Validar CPF</button>
+            <button type="button" id="botao-submit-zeros" onclick="ZEROS()" >Contar Sequência de Zeros</button>
+            <button type="button" id="botao-get-senha" onclick="SENHA()" >Geração de Senhas aleatórias e Classificação</button>
+        </form>
+    
+        <script type="text/javascript">
+                var button1 = document.getElementById('botao-submit-roman');
+                function Roman() {
+                    window.location = "http://localhost:7777/roman/";
+                }
+
+                var button2 = document.getElementById('botao-submit-cpf');
+                function CPF() {
+                    window.location = "http://localhost:7777/cpf/";
+                }
+
+                var button3 = document.getElementById('botao-submit-zeros');
+                function ZEROS() {
+                    window.location = "http://localhost:7777/zeros/";
+                }
+
+                var button3 = document.getElementById('botao-get-senha');
+                function SENHA() {
+                    window.location = "http://localhost:7777/senha/";
+                }
+        </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body,
+        html{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            margin: 1px 4px 0 0;
+        }
+        body{
+            background: url('https://addwill.addtoken.io/assets/images/chain.gif');
+            text-align: center;
+        }
+        .titulo{color: white; text-align: center; font-size: 300%; margin:80px; line-height: 3;} 
+        .botao{color: white; text-align: center; font-size:100%; margin:0; padding: 0;}
+        .classe1{display:inline; color: white; margin: 0; padding: 0; line-height: 12; font-size: 130%;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <h1 class="titulo">{{index}}</h1>
+        
+        <form method="post">
+            <div class="classe1">
+            <label for="nome">Digite um CPF para ser validado: </label>
+            <input type="text" placeholder="XXX.XXX.XXX-XX" id="cpf-input" onkeyup="isEnabled()">
+            <button type="button" id="botao-submit-cpf" onclick="CPF()" >Validador de CPF</button>
+        </form>
+    
+        <script type="text/javascript">
+                var input = document.getElementById('cpf-input');
+                var button = document.getElementById('botao-submit-cpf');
+                window.onload = function() {
+                    button.setAttribute('disabled', false);
+                }
+                function CPF() {
+                    var cpf = input.value;
+                    window.location = "http://localhost:7777/cpf/" + cpf;
+                }
+                function isEnabled() {
+                    if(input.value==="") {
+                        button.disabled = true;
+                    } else {
+                        button.disabled = false;
+                    }
+                }
+        </script>
+</body>
+</html>
